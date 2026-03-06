@@ -6,12 +6,16 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
   </head>
   <body>
+    <a href="/">Back</a>
+
     <div class="container-fluid text-center mx-auto" id="heading-container">
       <h1 id="heading" class="text-dark">You are...</h1>
     </div>
 
     <div class="container mx-auto p-2">
-        
+        <h1>You are {{ result.name }}!</h1>
+        <img src="{{ url_for('static', filename=result.image) }}" alt="{{ result.name }}" width="300">
+        <p>{{ result.description }}</p>
     </div>
   </body>
 </html>
